@@ -1,0 +1,147 @@
+$primary-color: hotpink;
+$primary-color-light: rgba($primary-color, 0.2);
+$shadow-color: #e1e5ee;
+$text-color: black;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@300&display=swap");
+
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
+
+// body {
+//   font-family: "Poppins", sans-serif;
+//   background: #fafafa;
+// }
+
+.l-wrap {
+  max-width: 1000px;
+  padding: 0 4rem;
+  margin: 0 auto;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+nav {
+  //   position: fixed;
+  //   top: 0;
+  width: 100%;
+  //   box-shadow: 0 4px 40px $shadow-color;
+  //   font-family: "Poppins", sans-serif;
+  background: white;
+  .nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+
+    .nav-logo {
+      font-size: 2rem;
+      margin-right: auto;
+      cursor: pointer;
+      transition: color 0.2s;
+      &:hover,
+      &:focus {
+        color: $primary-color;
+      }
+    }
+    .nav-item {
+      flex-shrink: 0;
+      flex-grow: 0;
+      font-weight: bold;
+      padding: 1.5rem 1.8rem;
+      position: relative;
+      cursor: pointer;
+      i {
+        position: absolute;
+        right: 0;
+        top: 40%;
+        transition: transform 0.3s;
+      }
+
+      &:after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 0.4em;
+        background: $primary-color;
+        border-radius: 4px;
+        bottom: 1em;
+        left: 1.6em;
+        transition: width 0.3s;
+      }
+      &:hover::after {
+        width: 60%;
+      }
+      &:hover {
+        ul {
+          opacity: 1;
+          visibility: visible;
+        }
+        i {
+          transform: rotate(180deg);
+        }
+      }
+
+      .nav-drop {
+        position: absolute;
+        top: 4.5rem;
+        box-shadow: 0 4px 16px $shadow-color;
+        background-color: white;
+        border-radius: 4px;
+        border: 1px solid $shadow-color;
+        width: 12rem;
+        padding: 1rem;
+        margin-left: -7.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 200ms ease-in-out;
+        text-align: right;
+        z-index: 1;
+        li {
+          padding: 0.5rem 1rem;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background 0.1s;
+          &:hover,
+          &:focus {
+            background: $primary-color-light;
+            outline: 2px dashed $primary-color;
+          }
+        }
+      }
+    }
+  }
+  .nav-btn {
+    button {
+      border: none;
+      outline: transparent;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      background: lighten($primary-color, 20);
+      color: darken($primary-color, 25);
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.1s;
+      &:hover {
+        background: lighten($primary-color, 15);
+      }
+      &:focus {
+        text-shadow: 0 0 18px $primary-color;
+        outline: 4px solid lighten($primary-color, 20);
+      }
+    }
+  }
+}

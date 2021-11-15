@@ -1,0 +1,71 @@
+// buttons
+// carousel
+// slider
+
+button {
+  border: none;
+  outline: transparent;
+  padding: 0.3rem 1.2rem;
+  border-radius: 0.5rem;
+  background: lighten($primary-color, 20);
+  color: darken($primary-color, 25);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.1s;
+  &:hover {
+    background: lighten($primary-color, 15);
+  }
+  &:focus {
+    text-shadow: 0 0 18px $primary-color;
+    outline: 4px solid lighten($primary-color, 20);
+  }
+}
+
+.book {
+  text-align: center;
+  direction: rtl;
+  .cover {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 4px hsl(222, 28%, 90%);
+    .badge {
+      position: absolute;
+      right: 0.5rem;
+      top: 0.5rem;
+      font-size: 0.8rem;
+      border-radius: 0.8rem;
+      z-index: 1;
+      background-color: $primary-color;
+      color: white;
+      padding: 0.2rem 0.4rem;
+    }
+  }
+  .name {
+    color: $primary-color;
+  }
+  .author {
+    font-size: 0.8rem;
+  }
+}
+
+.card {
+  max-width: 240px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 40px $shadow-color;
+  border: 1px solid $shadow-color;
+  text-align: center;
+  padding: 1rem;
+  .icon {
+    font-size: 3rem;
+    color: rgba($primary-color, 1);
+    text-shadow: 0 0 4rem rgba($primary-color, 1);
+  }
+  .title {
+  }
+  .text {
+    color: $text-muted;
+  }
+}

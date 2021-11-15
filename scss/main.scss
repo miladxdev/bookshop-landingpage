@@ -1,0 +1,32 @@
+@import "_base";
+@import "_layout";
+@import "_navigation";
+@import "_components";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(0, 0%, 98%);
+  font-family: "yekan", sans-serif;
+}
+
+.section-hero {
+  padding: 4rem 0;
+  background-color: rgba($primary-color, 0.1);
+}
+.section-topbooks {
+  padding: 4rem 0;
+}
+
+.section-newbooks {
+  padding: 4rem 0;
+  background-color: rgba($primary-color, 0.1);
+}
+
+.section-guarantee {
+  padding: 4rem 0;
+}

@@ -2,25 +2,14 @@
 // carousel
 // slider
 
-button {
-  border: none;
-  outline: transparent;
-  padding: 0.3rem 1.2rem;
-  border-radius: 0.5rem;
-  background: lighten($primary-color, 20);
-  color: darken($primary-color, 25);
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.1s;
-  &:hover {
-    background: lighten($primary-color, 15);
-  }
-  &:focus {
-    text-shadow: 0 0 18px $primary-color;
-    outline: 4px solid lighten($primary-color, 20);
-  }
+.btn-success {
+  @include button($success-color);
+}
+.btn-primary {
+  @include button($primary-color);
+}
+.btn-cta {
+  @include button($cta-color);
 }
 
 .book {
@@ -30,7 +19,7 @@ button {
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 4px 4px hsl(222, 28%, 90%);
+    box-shadow: 0 4px 30px hsl(222, 28%, 90%);
     .badge {
       position: absolute;
       right: 0.5rem;
@@ -38,7 +27,8 @@ button {
       font-size: 0.8rem;
       border-radius: 0.8rem;
       z-index: 1;
-      background-color: $primary-color;
+      background-color: rgba($primary-color, 0.3);
+      backdrop-filter: blur(8px);
       color: white;
       padding: 0.2rem 0.4rem;
     }
@@ -47,17 +37,20 @@ button {
     color: $primary-color;
   }
   .author {
+    color: $text-muted;
     font-size: 0.8rem;
   }
 }
 
 .card {
+  margin: 0 auto;
   max-width: 240px;
   border-radius: 1rem;
   box-shadow: 0 4px 40px $shadow-color;
   border: 1px solid $shadow-color;
   text-align: center;
   padding: 1rem;
+  cursor: pointer;
   .icon {
     font-size: 3rem;
     color: rgba($primary-color, 1);

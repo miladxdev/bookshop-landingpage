@@ -17,6 +17,16 @@ body {
 .section-hero {
   padding: 4rem 0;
   background-color: rgba($primary-color, 0.1);
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  p {
+    color: $text-muted;
+    margin-bottom: 1rem;
+  }
 }
 .section-topbooks {
   padding: 4rem 0;

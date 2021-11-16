@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,6 +15,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <!-- animate no scroll -->
+    <link rel="stylesheet" href="css/aos.css" />
     <title>بوک شاپ | خرید رمان</title>
   </head>
   <body>
@@ -37,26 +42,37 @@
               <ul class="nav-drop">
                 <li>فانتزی</li>
                 <li>تخیلی</li>
+                <li>حماسی</li>
                 <li>انگلیسی</li>
               </ul>
             </li>
+            <li class="nav-item">
+              پادکست<i class="fa fa-chevron-up"></i>
+              <ul class="nav-drop">
+                <li>تاریخی</li>
+                <li>ادبی</li>
+                <li>فلسفی</li>
+              </ul>
+            </li>
+            <li class="nav-item">درباره ما</li>
             <li class="nav-item">تماس</li>
-            <li class="nav-btn"><button>ثبت‌ نام</button></li>
+            <li class="nav-btn"><button class="btn-primary">ثبت‌ نام</button></li>
           </ul>
         </div>
       </nav>
     </header>
+
     <main>
       <section class="section-hero">
         <div class="container">
           <div class="row">
-            <div class="col-12 col-sm-7" style="display: flex; flex-direction: column; align-items: center; justify-content: center">
-              <h1>کتاب‌های جدیدت رو با بهترین قیمت بگیر</h1>
+            <div class="col-12 col-sm-7 hero">
+              <h1>کتاب‌های جدید رو با بهترین قیمت بگیر</h1>
               <p>
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
                 مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی
               </p>
-              <button>جستجو کن</button>
+              <button class="btn-cta">جستجو کن<i class="fa fa-search"></i></button>
             </div>
             <div class="col-12 col-sm-5">
               <img loading="lazy" src="img/illustration/Learning-pana.png" alt="image" />
@@ -68,79 +84,67 @@
       <section class="section-topbooks">
         <div class="container">
           <h3>پرفروش‌ترین</h3>
-          <div class="row">
-            <div class="col-6 col-sm-2">
-              <div class="book">
-                <div class="cover">
-                  <img loading="lazy" src="img/books/107678.jpg" alt="book" />
-                  <div class="badge">30% تخفیف</div>
-                </div>
-                <h4 class="name">بی حدومرز</h4>
-                <div class="author">جیم کوییک</div>
-                <div class="price">480000 ریال</div>
-                <button class="btn">خرید</button>
+          <div class="owl-carousel">
+            <div class="book">
+              <div class="cover">
+                <img loading="lazy" src="img/books/107678.jpg" alt="book" />
+                <div class="badge">30% تخفیف</div>
               </div>
+              <h4 class="name">بی حدومرز</h4>
+              <div class="author">جیم کوییک</div>
+              <div class="price">480000 ریال</div>
+              <button class="btn btn-success">خرید</button>
             </div>
 
-            <div class="col-6 col-sm-2">
-              <div class="book">
-                <div class="cover">
-                  <img loading="lazy" src="img/books/114328.jpg" alt="book" />
-                </div>
-                <h4 class="name">دوباره فکر کن</h4>
-                <div class="author">آدام گرانت</div>
-                <div class="price">520000 ریال</div>
-                <button class="btn">خرید</button>
+            <div class="book">
+              <div class="cover">
+                <img loading="lazy" src="img/books/114328.jpg" alt="book" />
               </div>
+              <h4 class="name">دوباره فکر کن</h4>
+              <div class="author">آدام گرانت</div>
+              <div class="price">520000 ریال</div>
+              <button class="btn btn-success">خرید</button>
             </div>
 
-            <div class="col-6 col-sm-2">
-              <div class="book">
-                <div class="cover">
-                  <img loading="lazy" src="img/books/121520.jpg" alt="book" />
-                  <div class="badge">45% تخفیف</div>
-                </div>
-                <h4 class="name">چگونه رنجی را...</h4>
-                <div class="author">مگان دیولن</div>
-                <div class="price">240000 ریال</div>
-                <button class="btn">خرید</button>
+            <div class="book">
+              <div class="cover">
+                <img loading="lazy" src="img/books/121520.jpg" alt="book" />
+                <div class="badge">45% تخفیف</div>
               </div>
+              <h4 class="name">چگونه رنجی را...</h4>
+              <div class="author">مگان دیولن</div>
+              <div class="price">240000 ریال</div>
+              <button class="btn btn-success">خرید</button>
             </div>
 
-            <div class="col-6 col-sm-2">
-              <div class="book">
-                <div class="cover">
-                  <img loading="lazy" src="img/books/124857.jpg" alt="book" />
-                </div>
-                <h4 class="name">به وسعت دریا</h4>
-                <div class="author">رضا چایچی</div>
-                <div class="price">230000 ریال</div>
-                <button class="btn">خرید</button>
+            <div class="book">
+              <div class="cover">
+                <img loading="lazy" src="img/books/124857.jpg" alt="book" />
               </div>
+              <h4 class="name">به وسعت دریا</h4>
+              <div class="author">رضا چایچی</div>
+              <div class="price">230000 ریال</div>
+              <button class="btn btn-success">خرید</button>
             </div>
 
-            <div class="col-6 col-sm-2">
-              <div class="book">
-                <div class="cover">
-                  <img loading="lazy" src="img/books/124863.jpg" alt="book" />
-                </div>
-                <h4 class="name">بی حدومرز</h4>
-                <div class="author">جیم کوییک</div>
-                <div class="price">جیم کوییک</div>
-                <button class="btn">خرید</button>
+            <div class="book">
+              <div class="cover">
+                <img loading="lazy" src="img/books/124863.jpg" alt="book" />
               </div>
+              <h4 class="name">هر روز یک قدم نزدیک‌تر</h4>
+              <div class="author">اروین دیلوم</div>
+              <div class="price">320000 ریال</div>
+              <button class="btn btn-success">خرید</button>
             </div>
 
-            <div class="col-6 col-sm-2">
-              <div class="book">
-                <div class="cover">
-                  <img loading="lazy" src="img/books/85093.jpg" alt="book" />
-                </div>
-                <h4 class="name">بی حدومرز</h4>
-                <div class="author">جیم کوییک</div>
-                <div class="price">جیم کوییک</div>
-                <button class="btn">خرید</button>
+            <div class="book">
+              <div class="cover">
+                <img loading="lazy" src="img/books/85093.jpg" alt="book" />
               </div>
+              <h4 class="name">خرده عادت‌ها</h4>
+              <div class="author">جیمز کلر</div>
+              <div class="price">120000 ریال</div>
+              <button class="btn btn-success">خرید</button>
             </div>
           </div>
         </div>
@@ -149,79 +153,67 @@
       <section class="section-newbooks">
         <div class="container">
           <h3>جدیدترین</h3>
-          <div class="row">
-            <div class="col-6 col-sm-2">
-              <div class="book">
-                <div class="cover">
-                  <img loading="lazy" src="img/books/124873.jpg" alt="book" />
-                  <div class="badge">30% تخفیف</div>
-                </div>
-                <h4 class="name">aبی حدومرز</h4>
-                <div class="author">جیم کوییک</div>
-                <div class="price">480000 ریال</div>
-                <button class="btn">خرید</button>
+          <div class="owl-carousel">
+            <div class="book">
+              <div class="cover">
+                <img loading="lazy" src="img/books/124873.jpg" alt="book" />
+                <div class="badge">30% تخفیف</div>
               </div>
+              <h4 class="name">به سوی عشق</h4>
+              <div class="author">لیسا کرنر</div>
+              <div class="price">620000 ریال</div>
+              <button class="btn btn-success">خرید</button>
             </div>
 
-            <div class="col-6 col-sm-2">
-              <div class="book">
-                <div class="cover">
-                  <img loading="lazy" src="img/books/124874.jpg" alt="book" />
-                </div>
-                <h4 class="name">دوباره فکر کن</h4>
-                <div class="author">آدام گرانت</div>
-                <div class="price">520000 ریال</div>
-                <button class="btn">خرید</button>
+            <div class="book">
+              <div class="cover">
+                <img loading="lazy" src="img/books/124862.jpg" alt="book" />
               </div>
+              <h4 class="name">خیره به خورشید نگریستن</h4>
+              <div class="author">اروین د یالوم</div>
+              <div class="price">80000 ریال</div>
+              <button class="btn btn-success">خرید</button>
             </div>
 
-            <div class="col-6 col-sm-2">
-              <div class="book">
-                <div class="cover">
-                  <img loading="lazy" src="img/books/124876.jpg" alt="book" />
-                  <div class="badge">45% تخفیف</div>
-                </div>
-                <h4 class="name">چگونه رنجی را...</h4>
-                <div class="author">مگان دیولن</div>
-                <div class="price">240000 ریال</div>
-                <button class="btn">خرید</button>
+            <div class="book">
+              <div class="cover">
+                <img loading="lazy" src="img/books/124876.jpg" alt="book" />
+                <div class="badge">45% تخفیف</div>
               </div>
+              <h4 class="name">چگونه رنجی را...</h4>
+              <div class="author">مگان دیولن</div>
+              <div class="price">240000 ریال</div>
+              <button class="btn btn-success">خرید</button>
             </div>
 
-            <div class="col-6 col-sm-2">
-              <div class="book">
-                <div class="cover">
-                  <img loading="lazy" src="img/books/85093.jpg" alt="book" />
-                </div>
-                <h4 class="name">به وسعت دریا</h4>
-                <div class="author">رضا چایچی</div>
-                <div class="price">230000 ریال</div>
-                <button class="btn">خرید</button>
+            <div class="book">
+              <div class="cover">
+                <img loading="lazy" src="img/books/85093.jpg" alt="book" />
               </div>
+              <h4 class="name">به وسعت دریا</h4>
+              <div class="author">رضا چایچی</div>
+              <div class="price">230000 ریال</div>
+              <button class="btn btn-success">خرید</button>
             </div>
 
-            <div class="col-6 col-sm-2">
-              <div class="book">
-                <div class="cover">
-                  <img loading="lazy" src="img/books/90615.jpg" alt="book" />
-                </div>
-                <h4 class="name">بی حدومرز</h4>
-                <div class="author">جیم کوییک</div>
-                <div class="price">جیم کوییک</div>
-                <button class="btn">خرید</button>
+            <div class="book">
+              <div class="cover">
+                <img loading="lazy" src="img/books/90615.jpg" alt="book" />
               </div>
+              <h4 class="name">بی حدومرز</h4>
+              <div class="author">جیم کوییک</div>
+              <div class="price">جیم کوییک</div>
+              <button class="btn btn-success">خرید</button>
             </div>
 
-            <div class="col-6 col-sm-2">
-              <div class="book">
-                <div class="cover">
-                  <img loading="lazy" src="img/books/124870.jpg" alt="book" />
-                </div>
-                <h4 class="name">بی حدومرز</h4>
-                <div class="author">جیم کوییک</div>
-                <div class="price">جیم کوییک</div>
-                <button class="btn">خرید</button>
+            <div class="book">
+              <div class="cover">
+                <img loading="lazy" src="img/books/124870.jpg" alt="book" />
               </div>
+              <h4 class="name">بی حدومرز</h4>
+              <div class="author">جیم کوییک</div>
+              <div class="price">جیم کوییک</div>
+              <button class="btn btn-success">خرید</button>
             </div>
           </div>
         </div>
@@ -231,7 +223,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <div class="card">
+              <div class="card" data-aos="fade-up" data-aos-delay="100">
                 <div class="icon">
                   <i class="far fa-check-circle"></i>
                 </div>
@@ -244,7 +236,7 @@
             </div>
 
             <div class="col-md-4">
-              <div class="card">
+              <div class="card" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon">
                   <i class="fas fa-archive"></i>
                 </div>
@@ -257,7 +249,7 @@
             </div>
 
             <div class="col-md-4">
-              <div class="card">
+              <div class="card" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon">
                   <i class="fas fa-shopping-bag"></i>
                 </div>
@@ -274,6 +266,8 @@
     </main>
 
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/aos.js"></script>
   </body>
 </html>

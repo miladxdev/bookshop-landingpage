@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@300&display=swap");
+.owl-carousel {
+  direction: ltr;
+}
+
+.owl-carousel .owl-nav {
+  display: none;
+}
+
 @font-face {
   font-family: "yekan";
   src: url(../fonts/yekan.woff);
@@ -7,6 +15,11 @@
 img {
   display: block;
   width: 100%;
+}
+
+ul,
+li {
+  list-style: none;
 }
 
 h1 {
@@ -21,20 +34,16 @@ h3 {
   margin-bottom: 0.8rem;
 }
 
-.l-wrap {
-  max-width: 1000px;
-  padding: 0 4rem;
-  margin: 0 auto;
-}
-
-ul,
-li {
-  list-style: none;
-}
-
 nav {
+  direction: ltr;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  color: #222224;
   width: 100%;
-  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
 }
 
 nav .nav-list {
@@ -114,13 +123,11 @@ nav .nav-list .nav-item:hover i {
 nav .nav-list .nav-item .nav-drop {
   position: absolute;
   top: 4.5rem;
-  -webkit-box-shadow: 0 4px 16px #e1e5ee;
-          box-shadow: 0 4px 16px #e1e5ee;
   background-color: white;
   border-radius: 4px;
   border: 1px solid #e1e5ee;
   width: 12rem;
-  padding: 1rem;
+  padding: 0.5rem;
   margin-left: -7.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -135,7 +142,7 @@ nav .nav-list .nav-item .nav-drop {
   -webkit-transition: opacity 200ms ease-in-out;
   transition: opacity 200ms ease-in-out;
   text-align: right;
-  z-index: 1;
+  z-index: 2;
 }
 
 nav .nav-list .nav-item .nav-drop li {
@@ -148,13 +155,40 @@ nav .nav-list .nav-item .nav-drop li {
 
 nav .nav-list .nav-item .nav-drop li:hover, nav .nav-list .nav-item .nav-drop li:focus {
   background: rgba(255, 105, 180, 0.2);
-  outline: 2px dashed hotpink;
 }
 
-nav .nav-btn button {
+.btn-success {
   border: none;
   outline: transparent;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 1.4rem;
+  border-radius: 0.5rem;
+  background: #d3f8d3;
+  color: #1fc71f;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.btn-success i {
+  padding-right: 0.5em;
+}
+
+.btn-success:hover {
+  background: #bdf5bd;
+}
+
+.btn-success:focus {
+  text-shadow: 0 0 18px #7bea7b;
+  outline: 4px solid #b0f3b0;
+}
+
+.btn-primary {
+  border: none;
+  outline: transparent;
+  padding: 0.3rem 1.4rem;
   border-radius: 0.5rem;
   background: #ffcfe7;
   color: #e90074;
@@ -166,22 +200,26 @@ nav .nav-btn button {
   transition: 0.1s;
 }
 
-nav .nav-btn button:hover {
+.btn-primary i {
+  padding-right: 0.5em;
+}
+
+.btn-primary:hover {
   background: #ffb6da;
 }
 
-nav .nav-btn button:focus {
+.btn-primary:focus {
   text-shadow: 0 0 18px hotpink;
-  outline: 4px solid #ffcfe7;
+  outline: 4px solid #ffa6d3;
 }
 
-button {
+.btn-cta {
   border: none;
   outline: transparent;
-  padding: 0.3rem 1.2rem;
+  padding: 0.3rem 1.4rem;
   border-radius: 0.5rem;
-  background: #ffcfe7;
-  color: #e90074;
+  background: #ccdeff;
+  color: #0050e6;
   font-family: inherit;
   font-size: inherit;
   font-weight: bold;
@@ -190,13 +228,17 @@ button {
   transition: 0.1s;
 }
 
-button:hover {
-  background: #ffb6da;
+.btn-cta i {
+  padding-right: 0.5em;
 }
 
-button:focus {
-  text-shadow: 0 0 18px hotpink;
-  outline: 4px solid #ffcfe7;
+.btn-cta:hover {
+  background: #b3cdff;
+}
+
+.btn-cta:focus {
+  text-shadow: 0 0 18px #669cff;
+  outline: 4px solid #a3c3ff;
 }
 
 .book {
@@ -208,8 +250,8 @@ button:focus {
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
-  -webkit-box-shadow: 0 4px 4px #dee3ed;
-          box-shadow: 0 4px 4px #dee3ed;
+  -webkit-box-shadow: 0 4px 30px #dee3ed;
+          box-shadow: 0 4px 30px #dee3ed;
 }
 
 .book .cover .badge {
@@ -219,7 +261,9 @@ button:focus {
   font-size: 0.8rem;
   border-radius: 0.8rem;
   z-index: 1;
-  background-color: hotpink;
+  background-color: rgba(255, 105, 180, 0.3);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   color: white;
   padding: 0.2rem 0.4rem;
 }
@@ -229,10 +273,12 @@ button:focus {
 }
 
 .book .author {
+  color: #4f5052;
   font-size: 0.8rem;
 }
 
 .card {
+  margin: 0 auto;
   max-width: 240px;
   border-radius: 1rem;
   -webkit-box-shadow: 0 4px 40px #e1e5ee;
@@ -240,6 +286,7 @@ button:focus {
   border: 1px solid #e1e5ee;
   text-align: center;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .card .icon {
@@ -267,6 +314,27 @@ body {
 .section-hero {
   padding: 4rem 0;
   background-color: rgba(255, 105, 180, 0.1);
+}
+
+.section-hero .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-hero p {
+  color: #4f5052;
+  margin-bottom: 1rem;
 }
 
 .section-topbooks {

@@ -3,15 +3,62 @@
 // typography
 // functions
 // reset
+
 $text-muted: #4f5052;
+$success-color: hsl(120, 73%, 70%);
+$cta-color: hsl(219, 100%, 70%);
+// navigation
+$primary-color: hotpink;
+$primary-color-light: rgba($primary-color, 0.2);
+$shadow-color: #e1e5ee;
+$text-color: rgb(34, 34, 36);
+
+.owl-carousel {
+  direction: ltr;
+  .owl-nav {
+    display: none;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@300&display=swap");
+
 @font-face {
   font-family: "yekan";
   src: url(../fonts/yekan.woff);
 }
 
+@mixin button($color) {
+  border: none;
+  outline: transparent;
+  padding: 0.3rem 1.4rem;
+  border-radius: 0.5rem;
+  background: lighten($color, 20);
+  color: darken($color, 25);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.1s;
+  i {
+    padding-right: 0.5em;
+  }
+  &:hover {
+    background: lighten($color, 15);
+  }
+  &:focus {
+    text-shadow: 0 0 18px $color;
+    outline: 4px solid lighten($color, 12);
+  }
+}
+
 img {
   display: block;
   width: 100%;
+}
+
+ul,
+li {
+  list-style: none;
 }
 
 h1 {

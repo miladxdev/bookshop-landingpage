@@ -1,21 +1,31 @@
-// $(document).ready(() => {
-//   // If a link has a dropdown, add sub menu toggle.
-//   $("nav ul li a:not(:only-child)").click(function (e) {
-//     $(this).siblings(".nav-dropdown").toggle("fast");
-//     // Close one dropdown when selecting another
-//     $(".nav-dropdown").not($(this).siblings()).hide();
-//     e.stopPropagation();
-//   });
-//   // Clicking away from dropdown will remove the dropdown class
-//   $("html").click(function () {
-//     $(".nav-dropdown").hide();
-//   });
-//   // Toggle open and close nav styles on click
-//   $("#nav-toggle").click(function () {
-//     $("nav ul").slideToggle();
-//   });
-//   // Hamburger to X toggle
-//   $("#nav-toggle").on("click", function () {
-//     this.classList.toggle("active");
-//   });
-// });
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel({
+    items: 6,
+    loop: true,
+    margin: 20,
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    lazyLoad: true,
+    responsiveClass: true,
+    dots: false,
+    responsive: {
+      0: {
+        items: 2,
+      },
+      600: {
+        items: 4,
+      },
+      1000: {
+        items: 6,
+      },
+    },
+  });
+
+  AOS.init({
+    offset: 400,
+    duration: 500,
+    easing: "ease",
+    delay: 500,
+  });
+});

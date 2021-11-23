@@ -44,21 +44,33 @@
 
 .card {
   margin: 0 auto;
-  max-width: 240px;
+  max-width: 250px;
   border-radius: 1rem;
   box-shadow: 0 4px 40px $shadow-color;
   border: 1px solid $shadow-color;
   text-align: center;
   padding: 1rem;
   cursor: pointer;
+  transition: transform 200ms;
+  &:hover {
+    transform: scale(1.1) !important;
+  }
   .icon {
     font-size: 3rem;
     color: rgba($primary-color, 1);
     text-shadow: 0 0 4rem rgba($primary-color, 1);
   }
-  .title {
-  }
+
   .text {
     color: $text-muted;
+  }
+}
+
+@media screen and (max-width: $break-point) {
+  .section-guarantee {
+    .card {
+      margin-bottom: 2rem;
+      max-width: 80%;
+    }
   }
 }

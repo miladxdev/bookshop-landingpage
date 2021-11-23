@@ -12,6 +12,10 @@ $primary-color: hotpink;
 $primary-color-light: rgba($primary-color, 0.2);
 $shadow-color: #e1e5ee;
 $text-color: rgb(34, 34, 36);
+$break-point: 768px;
+
+//footer
+$footer-bg-color: #121212;
 
 .owl-carousel {
   direction: ltr;
@@ -48,6 +52,9 @@ $text-color: rgb(34, 34, 36);
   &:focus {
     text-shadow: 0 0 18px $color;
     outline: 4px solid lighten($color, 12);
+  }
+  &:active {
+    transform: scale(0.98);
   }
 }
 

@@ -28,6 +28,7 @@ body {
     margin-bottom: 1rem;
   }
 }
+
 .section-topbooks {
   padding: 6rem 0;
 }
@@ -35,6 +36,12 @@ body {
 .section-newbooks {
   padding: 6rem 0;
   background-color: rgba($primary-color, 0.09);
+}
+.section-banner {
+  padding-top: 6rem;
+  img {
+    border-radius: 1rem;
+  }
 }
 
 .section-guarantee {

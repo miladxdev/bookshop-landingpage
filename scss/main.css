@@ -497,6 +497,14 @@ body {
   background-color: rgba(255, 105, 180, 0.09);
 }
 
+.section-banner {
+  padding-top: 6rem;
+}
+
+.section-banner img {
+  border-radius: 1rem;
+}
+
 .section-guarantee {
   padding: 6rem 0;
 }

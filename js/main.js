@@ -28,4 +28,10 @@ $(document).ready(function () {
     easing: "ease",
     delay: 500,
   });
+
+  // toggle anv
+  $("#nav-toggle").click(() => {
+    $(".nav-item").toggle(100);
+    $(".nav-link").toggle(100);
+  });
 });

@@ -499,6 +499,7 @@ body {
 
 .section-banner {
   padding-top: 6rem;
+  cursor: pointer;
 }
 
 .section-banner img {

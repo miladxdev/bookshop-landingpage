@@ -35,14 +35,13 @@ h3 {
 }
 
 footer {
-  text-align: center;
   background-color: #121212;
   color: whitesmoke;
   padding: 6rem 0;
 }
 
 footer h3 {
-  color: hotpink;
+  color: #79a8ff;
 }
 
 footer a {
@@ -52,7 +51,11 @@ footer a {
 }
 
 footer a:hover {
-  color: hotpink;
+  color: #79a8ff;
+}
+
+footer .footer-social {
+  text-align: center;
 }
 
 footer .footer-social i {
@@ -64,7 +67,7 @@ footer .footer-social i {
 }
 
 footer .footer-social i:hover {
-  color: hotpink;
+  color: #79a8ff;
 }
 
 @media screen and (max-width: 768px) {
@@ -76,9 +79,10 @@ footer .footer-social i:hover {
 nav {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  font-family: "Yekan";
-  background: rgba(255, 255, 255, 0.9);
+  font-family: "Yekan", sans-serif;
+  background: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   z-index: 5;
@@ -120,8 +124,8 @@ nav .nav-list .nav-logo .logo {
 }
 
 nav .nav-list .nav-logo .logo:hover, nav .nav-list .nav-logo .logo:focus {
-  color: hotpink;
-  text-shadow: 0 0 3rem hotpink;
+  color: #79a8ff;
+  text-shadow: 0 0 3rem #79a8ff;
 }
 
 nav .nav-list .nav-logo #nav-toggle {
@@ -160,7 +164,7 @@ nav .nav-list .nav-link:after {
   content: "";
   width: 0%;
   height: 0.3em;
-  background: hotpink;
+  background: #79a8ff;
   border-radius: 4px;
   bottom: 1em;
   left: 1.6em;
@@ -186,8 +190,6 @@ nav .nav-list .nav-link .nav-drop {
   text-align: right;
   position: absolute;
   top: 4.4rem;
-  -webkit-box-shadow: 0 4px 16px #e1e5ee;
-          box-shadow: 0 4px 16px #e1e5ee;
   background-color: white;
   border-radius: 4px;
   border: 1px solid #e1e5ee;
@@ -217,7 +219,7 @@ nav .nav-list .nav-link .nav-drop li {
 }
 
 nav .nav-list .nav-link .nav-drop li:hover, nav .nav-list .nav-link .nav-drop li:focus {
-  background: rgba(255, 105, 180, 0.2);
+  background: rgba(121, 168, 255, 0.2);
 }
 
 @media screen and (min-width: 768px) {
@@ -315,8 +317,8 @@ nav .nav-list .nav-link .nav-drop li:hover, nav .nav-list .nav-link .nav-drop li
   outline: transparent;
   padding: 0.3rem 1.4rem;
   border-radius: 0.5rem;
-  background: #ffcfe7;
-  color: #e90074;
+  background: #dfeaff;
+  color: #0057f9;
   font-family: inherit;
   font-size: inherit;
   font-weight: bold;
@@ -330,12 +332,12 @@ nav .nav-list .nav-link .nav-drop li:hover, nav .nav-list .nav-link .nav-drop li
 }
 
 .btn-primary:hover {
-  background: #ffb6da;
+  background: #c6daff;
 }
 
 .btn-primary:focus {
-  text-shadow: 0 0 18px hotpink;
-  outline: 4px solid #ffa6d3;
+  text-shadow: 0 0 18px #79a8ff;
+  outline: 4px solid #b6d0ff;
 }
 
 .btn-primary:active {
@@ -356,6 +358,7 @@ nav .nav-list .nav-link .nav-drop li:hover, nav .nav-list .nav-link .nav-drop li
   cursor: pointer;
   -webkit-transition: 0.1s;
   transition: 0.1s;
+  width: 150px;
 }
 
 .btn-cta i {
@@ -377,7 +380,7 @@ nav .nav-list .nav-link .nav-drop li:hover, nav .nav-list .nav-link .nav-drop li
 }
 
 .book {
-  text-align: center;
+  text-align: right;
   direction: rtl;
 }
 
@@ -396,7 +399,7 @@ nav .nav-list .nav-link .nav-drop li:hover, nav .nav-list .nav-link .nav-drop li
   font-size: 0.8rem;
   border-radius: 0.8rem;
   z-index: 1;
-  background-color: rgba(255, 105, 180, 0.3);
+  background-color: rgba(121, 168, 255, 0.3);
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   color: white;
@@ -404,7 +407,7 @@ nav .nav-list .nav-link .nav-drop li:hover, nav .nav-list .nav-link .nav-drop li
 }
 
 .book .name {
-  color: hotpink;
+  color: #79a8ff;
 }
 
 .book .author {
@@ -435,8 +438,8 @@ nav .nav-list .nav-link .nav-drop li:hover, nav .nav-list .nav-link .nav-drop li
 
 .card .icon {
   font-size: 3rem;
-  color: hotpink;
-  text-shadow: 0 0 4rem hotpink;
+  color: #79a8ff;
+  text-shadow: 0 0 4rem #79a8ff;
 }
 
 .card .text {
@@ -463,8 +466,9 @@ body {
 }
 
 .section-hero {
-  padding: 6rem 0;
-  background-color: rgba(255, 105, 180, 0.09);
+  text-align: right;
+  padding: 8rem 0 6rem 0;
+  background-color: rgba(121, 168, 255, 0.1);
 }
 
 .section-hero .hero {
@@ -475,17 +479,19 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
+.section-hero h1 {
+  font-size: 1.8rem;
+}
+
 .section-hero p {
   color: #4f5052;
   margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 .section-topbooks {
@@ -494,7 +500,7 @@ body {
 
 .section-newbooks {
   padding: 6rem 0;
-  background-color: rgba(255, 105, 180, 0.09);
+  background-color: rgba(121, 168, 255, 0.1);
 }
 
 .section-banner {

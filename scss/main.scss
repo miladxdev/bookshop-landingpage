@@ -15,17 +15,21 @@ body {
 }
 
 .section-hero {
-  padding: 6rem 0;
-  background-color: rgba($primary-color, 0.09);
+  text-align: right;
+  padding: 8rem 0 6rem 0;
+  background-color: rgba($primary-color, 0.1);
   .hero {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+  }
+  h1 {
+    font-size: 1.8rem;
   }
   p {
     color: $text-muted;
     margin-bottom: 1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -35,7 +39,7 @@ body {
 
 .section-newbooks {
   padding: 6rem 0;
-  background-color: rgba($primary-color, 0.09);
+  background-color: rgba($primary-color, 0.1);
 }
 .section-banner {
   padding-top: 6rem;

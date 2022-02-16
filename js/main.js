@@ -26,7 +26,7 @@ $(document).ready(function () {
     offset: 100,
     duration: 500,
     easing: "ease",
-    delay: 500,
+    delay: 600,
   });
 
   // toggle anv

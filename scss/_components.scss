@@ -10,10 +10,11 @@
 }
 .btn-cta {
   @include button($cta-color);
+  width: 150px;
 }
 
 .book {
-  text-align: center;
+  text-align: right;
   direction: rtl;
   .cover {
     position: relative;
